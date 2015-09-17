@@ -13,8 +13,9 @@ var buf = convert(someBuf, 'utf8', 'gb2312') // gb2312 => utf8
 var buf = convert(someStr, 'utf8', 'gb2312') // or string input instead
 
 var buf = convert(someBuf, 'utf8') // even with encoding detection
+var buf = convert(someBuf) // whatever => utf8
 ```
 
 ```plain
-convert(bufferOrString, toEncoding, [fromEncoding])
+convert(bufferOrString, [toEncoding], [fromEncoding])
 ```

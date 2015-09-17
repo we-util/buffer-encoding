@@ -8,6 +8,11 @@ exports.convert = function convert (txt, toEnc, fromEnc) {
     fromEnc = chardet.detect(txt).encoding
   }
 
+  // to-encodding default to utf8
+  if (!toEnc) {
+    toEnc = 'utf8'
+  }
+
   // use lib-'encoding' to perform buffer converting
   var newBuf = encoding.convert(txt, toEnc, fromEnc)
   return newBuf
